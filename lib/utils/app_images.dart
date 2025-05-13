@@ -4,6 +4,7 @@ class AppImages {
 
   //png
   static const String google = '${_baseImage}google.png';
+  static const String man = '${_baseImage}man.png';
 
   //svg
   static const String vector = '${_baseSvg}vector.svg';

@@ -2,6 +2,7 @@ import 'package:chat/views/widgets/line_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../utils/app_images.dart';
+import '../widgets/bottom_navigator_bar_widgte.dart';
 import '../widgets/custom_form_field_widget.dart';
 import '../widgets/external_auth_buttons.dart';
 
@@ -12,6 +13,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final Color borderColor = Theme.of(context).dividerColor;
     final _emailController = TextEditingController();
+    final _passController = TextEditingController();
     return Scaffold(
       appBar: AppBar(title: Text('KIRISH'), centerTitle: false),
       body: Padding(
@@ -39,7 +41,7 @@ class LoginScreen extends StatelessWidget {
             SizedBox(
               height: 50,
               child: CustomFormFieldWidget(
-                controller: _emailController,
+                controller: _passController,
                 hintText: "password",
               ),
             ),
@@ -57,7 +59,14 @@ class LoginScreen extends StatelessWidget {
             ),
             SizedBox(height: 18),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => BottomNavigatorBarWidget(),
+                  ),
+                );
+              },
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 77, vertical: 12),
                 width: double.infinity,
@@ -94,6 +103,21 @@ class LoginScreen extends StatelessWidget {
             ExternalAuthButtons(
               title: 'Continue with Apple',
               logo: Icon(Icons.apple),
+            ),
+            Spacer(),
+            Row(
+              children: [
+                Text('Akkauntingiz yo\'qmi?'),
+                TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => LoginScreen()),
+                    );
+                  },
+                  child: Text('Kirish'),
+                ),
+              ],
             ),
           ],
         ),
