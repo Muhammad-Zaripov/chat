@@ -12,10 +12,10 @@ class SigninScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _nameController = TextEditingController();
-    final _emailController = TextEditingController();
-    final _passController = TextEditingController();
-    final _attController = TextEditingController();
+    final nameController = TextEditingController();
+    final emailController = TextEditingController();
+    final passController = TextEditingController();
+    final attController = TextEditingController();
     return Scaffold(
       appBar: AppBar(title: Text('RO’YXATDAN O’TISH'), centerTitle: false),
       body: Padding(
@@ -36,7 +36,7 @@ class SigninScreen extends StatelessWidget {
               ),
               SizedBox(height: 13),
               CustomFormFieldWidget(
-                controller: _nameController,
+                controller: nameController,
                 hintText: 'ism va Familiya',
               ),
               SizedBox(height: 23),
@@ -52,7 +52,7 @@ class SigninScreen extends StatelessWidget {
               ),
               SizedBox(height: 13),
               CustomFormFieldWidget(
-                controller: _emailController,
+                controller: emailController,
                 hintText: 'namuna@gmail.com',
               ),
               SizedBox(height: 23),
@@ -68,14 +68,14 @@ class SigninScreen extends StatelessWidget {
               ),
               SizedBox(height: 13),
               CustomFormFieldWidget(
-                controller: _passController,
+                controller: passController,
                 hintText: 'password',
               ),
               SizedBox(height: 23),
               Text('Parolni tasdiqlang'),
               SizedBox(height: 13),
               CustomFormFieldWidget(
-                controller: _attController,
+                controller: attController,
                 hintText: 'password',
               ),
               SizedBox(height: 23),

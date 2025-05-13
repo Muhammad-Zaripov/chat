@@ -6,7 +6,7 @@ class CustomFormFieldWidget extends StatelessWidget {
   final TextInputType keyboardType;
   final bool obscureText;
   final Icon? prefixIcon;
-  final Icon? suffixIcon;
+  final IconButton? suffixIcon;
   final String? Function(String?)? validator;
 
   const CustomFormFieldWidget({

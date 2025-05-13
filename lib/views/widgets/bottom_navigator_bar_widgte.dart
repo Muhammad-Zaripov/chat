@@ -42,6 +42,7 @@ class _BottomNavigatorBarWidgetState extends State<BottomNavigatorBarWidget> {
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
               AppImages.person,
+              // ignore: deprecated_member_use
               color: _currentScreen == 0 ? Colors.green : Colors.grey.shade400,
             ),
             label: '',
@@ -49,6 +50,7 @@ class _BottomNavigatorBarWidgetState extends State<BottomNavigatorBarWidget> {
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
               AppImages.chat,
+              // ignore: deprecated_member_use
               color: _currentScreen == 1 ? Colors.green : Colors.grey.shade400,
             ),
             label: '',
@@ -56,6 +58,7 @@ class _BottomNavigatorBarWidgetState extends State<BottomNavigatorBarWidget> {
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
               AppImages.photo,
+              // ignore: deprecated_member_use
               color: _currentScreen == 2 ? Colors.green : Colors.grey.shade400,
             ),
             label: '',
@@ -63,6 +66,7 @@ class _BottomNavigatorBarWidgetState extends State<BottomNavigatorBarWidget> {
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
               AppImages.setting,
+              // ignore: deprecated_member_use
               color: _currentScreen == 3 ? Colors.green : Colors.grey.shade400,
             ),
             label: '',

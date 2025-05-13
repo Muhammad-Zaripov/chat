@@ -1,3 +1,4 @@
+import 'package:chat/views/screens/signin_screen.dart';
 import 'package:chat/views/widgets/line_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -12,8 +13,8 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Color borderColor = Theme.of(context).dividerColor;
-    final _emailController = TextEditingController();
-    final _passController = TextEditingController();
+    final emailController = TextEditingController();
+    final passController = TextEditingController();
     return Scaffold(
       appBar: AppBar(title: Text('KIRISH'), centerTitle: false),
       body: Padding(
@@ -28,7 +29,7 @@ class LoginScreen extends StatelessWidget {
             SizedBox(
               height: 50,
               child: CustomFormFieldWidget(
-                controller: _emailController,
+                controller: emailController,
                 hintText: "namuna@gmail.com",
               ),
             ),
@@ -41,7 +42,7 @@ class LoginScreen extends StatelessWidget {
             SizedBox(
               height: 50,
               child: CustomFormFieldWidget(
-                controller: _passController,
+                controller: passController,
                 hintText: "password",
               ),
             ),
@@ -112,10 +113,10 @@ class LoginScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => LoginScreen()),
+                      MaterialPageRoute(builder: (context) => SigninScreen()),
                     );
                   },
-                  child: Text('Kirish'),
+                  child: Text('Ro’yxatdan o’tish'),
                 ),
               ],
             ),

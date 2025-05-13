@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../widgets/add_history_widget.dart';
 import '../widgets/history_widget.dart';
+import 'in_chat_screen.dart';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
@@ -16,7 +17,7 @@ class ChatScreen extends StatefulWidget {
 class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
-    final _searchController = TextEditingController();
+    final searchController = TextEditingController();
     return Scaffold(
       appBar: AppBar(
         title: Text('Chat'),
@@ -30,8 +31,8 @@ class _ChatScreenState extends State<ChatScreen> {
           children: [
             CustomFormFieldWidget(
               prefixIcon: Icon(Icons.search),
-              suffixIcon: Icon(Icons.mic),
-              controller: _searchController,
+              suffixIcon: IconButton(onPressed: () {}, icon: Icon(Icons.mic)),
+              controller: searchController,
               hintText: 'Search here..',
             ),
             SizedBox(height: 35),
@@ -56,6 +57,12 @@ class _ChatScreenState extends State<ChatScreen> {
                 itemCount: 5,
                 itemBuilder: (context, index) {
                   return ListTile(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => InChatScreen()),
+                      );
+                    },
                     leading: Image.asset(AppImages.man),
                     title: Text(
                       'Smith Mathew',
